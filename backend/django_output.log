@@ -1,0 +1,482 @@
+Bad Request: /authentication/signup/
+Bad Request: /authentication/signup/
+Bad Request: /authentication/signup/
+Bad Request: /authentication/signup/
+Watching for file changes with StatReloader
+Bad Request: /authentication/signup/
+Not Found: /favicon.ico
+Bad Request: /authentication/signup/
+Bad Request: /authentication/signup/
+Bad Request: /authentication/signup/
+Not Found: /favicon.ico
+Forbidden: /userdetails/userinfo/
+Unauthorized: /userdetails/userinfo/
+Unauthorized: /userdetails/userinfo/
+Unauthorized: /userdetails/userinfo/
+Unauthorized: /userdetails/userinfo/
+Unauthorized: /userdetails/userinfo/
+Unauthorized: /userdetails/userinfo/
+Method Not Allowed: /authentication/login/
+Unauthorized: /userdetails/userinfo/
+Method Not Allowed: /authentication/login/
+Unauthorized: /userdetails/userinfo/
+Unauthorized: /userdetails/userinfo/
+Unauthorized: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /userdetails/userinfo/
+Internal Server Error: /userdetails/userinfo/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/views.py", line 13, in userinfo_view
+    if serializer.is_valid():
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 483, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/fields.py", line 547, in run_validation
+    value = self.to_internal_value(data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/serializers.py", line 9, in to_internal_value
+    import six
+ModuleNotFoundError: No module named 'six'
+Method Not Allowed: /userdetails/userinfo/
+Internal Server Error: /userdetails/userinfo/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/views.py", line 13, in userinfo_view
+    if serializer.is_valid():
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 483, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/fields.py", line 547, in run_validation
+    value = self.to_internal_value(data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/serializers.py", line 9, in to_internal_value
+    import six
+ModuleNotFoundError: No module named 'six'
+Method Not Allowed: /userdetails/userinfo/
+Internal Server Error: /userdetails/userinfo/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/views.py", line 13, in userinfo_view
+    if serializer.is_valid():
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 483, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/fields.py", line 547, in run_validation
+    value = self.to_internal_value(data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/serializers.py", line 21, in to_internal_value
+    decoded_file = base64.b64decode(data)
+  File "/usr/lib/python3.8/base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Internal Server Error: /userdetails/userinfo/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/views.py", line 14, in userinfo_view
+    serializer.save()
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 177, in create
+    raise NotImplementedError('`create()` must be implemented.')
+NotImplementedError: `create()` must be implemented.
+Not Found: /userdeials/userinfo/
+Internal Server Error: /userdetails/userinfo/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+Method Not Allowed: /userdetails/userinfo/
+Internal Server Error: /userdetails/userinfo/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/views.py", line 14, in userinfo_view
+    serializer.save()
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 177, in create
+    raise NotImplementedError('`create()` must be implemented.')
+NotImplementedError: `create()` must be implemented.
+Internal Server Error: /userdetails/userinfo/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/views.py", line 14, in userinfo_view
+    serializer.save()
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 177, in create
+    raise NotImplementedError('`create()` must be implemented.')
+NotImplementedError: `create()` must be implemented.
+Method Not Allowed: /userdetails/userinfo/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /userdetails/userinfo/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/UserDetailsHub/views.py", line 14, in userinfo_view
+    serializer.save()
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1745, in as_sql
+    value_rows = [
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1746, in <listcomp>
+    [
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1695, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/fields/files.py", line 317, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/fields/files.py", line 93, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/files/storage/base.py", line 38, in save
+    name = self._save(name, content)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/files/storage/filesystem.py", line 106, in _save
+    fd = os.open(full_path, self.OS_OPEN_FLAGS, 0o666)
+PermissionError: [Errno 13] Permission denied: '/var/www/vhosts/interv.co.in/api.interv.co.in/backend/media/ProfileImages/Screenshot_157.png'
+Method Not Allowed: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Internal Server Error: /userdetails/userinfo/1
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to api.interv.co.in/userdetails/userinfo/1/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Unauthorized: /userdetails/userinfo/1/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /userdetails/userinfo/
+Not Found: /favicon.ico
+Bad Request: /authentication/login/
+Bad Request: /authentication/signup/
+Bad Request: /authentication/signup/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /authentication/signup/
+Bad Request: /authentication/signup/
+Bad Request: /authentication/login/
+Bad Request: /authentication/signup/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /authentication/signup/
+Bad Request: /authentication/signup/
+Internal Server Error: /authentication/signup/
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+MySQLdb.IntegrityError: (1048, "Column 'first_name' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/AuthenticationHub/views.py", line 21, in signup_view
+    new_user = reg_serializer.save()
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/backend/AuthenticationHub/serializers.py", line 75, in create
+    user.save()
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+  File "/var/www/vhosts/interv.co.in/api.interv.co.in/env/lib/python3.8/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+django.db.utils.IntegrityError: (1048, "Column 'first_name' cannot be null")
+Bad Request: /authentication/signup/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Watching for file changes with StatReloader
+Bad Request: /authentication/login/
+Watching for file changes with StatReloader
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Watching for file changes with StatReloader
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 231
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2696
+Not Found: //authentication/login/
+"POST //authentication/login/ HTTP/1.1" 404 2730
+Bad Request: /authentication/login/
+"POST /authentication/login/ HTTP/1.1" 400 63
+Watching for file changes with StatReloader
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Method Not Allowed: /userdetails/userinfo/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /authentication/login/
+Method Not Allowed: /userdetails/userinfo/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Method Not Allowed: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/
+Method Not Allowed: /authentication/login/
+Bad Request: /authentication/login/
+Bad Request: /authentication/login/

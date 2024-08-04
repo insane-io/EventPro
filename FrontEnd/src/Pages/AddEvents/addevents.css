@@ -1,0 +1,16 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this as needed */
+}
+
+.card {
+    border-radius: 12px; /* Adjust the border radius as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow as needed */
+    overflow: hidden; /* Ensure content doesn't go beyond rounded corners */
+}
+
+.card-body {
+    padding: 20px; /* Adjust the padding as needed */
+}
