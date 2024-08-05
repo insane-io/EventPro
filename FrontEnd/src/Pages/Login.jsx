@@ -25,6 +25,7 @@ const Login = () => {
     try {
       console.log(postData);
       const res = await axiosInstance.post(`/authentication/login/`, postData);
+      
 
       localStorage.setItem("access_token", res.data.access);
       localStorage.setItem("refresh_token", res.data.refresh);
