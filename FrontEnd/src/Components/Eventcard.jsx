@@ -19,13 +19,32 @@ const Eventcard = (props) => {
     <>
       <div>
         <Link to={props.link} className='mx-auto'>
-          <div className="border-2 h-auto rounded-xl bg-none hover:scale-105 shadow-md">
-            <div className="image flex items-center flex-col">
-              <img src={`http://127.0.0.1:8000${props.img}`} alt='' className="w-60 h-80 object-cover" />
-              <h1 className="mt-3 text-xl font-semibold w-5/6">{props.Title}</h1>
-              <h1 className="my-1 font-thin w-5/6 text-gray-400">{props.sdate} to {props.edate}</h1>
+        <div className='bg-[#FFE5E5] rounded-3xl' >
+              <img src={imgae} alt='college' className='w-full object-cover h-40 rounded-3xl p-4' />
+              <p className='mb-2 ps-4 text-2xl font-extrabold text-[#FF6B66]'><strong>Flipkart GRID 6.0 - Software Development Track</strong></p>
+              <p className='ps-4 text-xl text-[#FF6B66] '><strong> Venue :</strong> Tech Convention Center</p>
+              <div className=' grid grid-cols-2'>
+                <div className='col-span-1'>
+                  <p className='text-left text-l text-[#FF6B66] mt-4 px-4'>2024-09-15</p>
+                  <p className='text-left text-l text-[#FF6B66] px-4 '>09:00 AM</p>
+                </div>
+                <div className='col-span-1 px-4 mt-4'>
+                  <p className='text-right text-2xl text-[#FF6B66] '>Prize Worth</p>
+                  <p className='text-right text-4xl font-extrabold text-[#FF0000]'>$5000</p>
+                </div>
+              </div>
+              <div className='grid grid-cols-2 mt-8 p-4'>
+                <div className='col-span-1 '>
+                  <button className="text-white font-medium rounded-3xl  px-5 py-2.5 text-center bg-[#FF6B66]"
+                    type="button">More Details</button>
+                </div>
+                <div className='col-span-1 '>
+                  <p className='text-right text-4xl font-extrabold text-[#FF6B66]'>$50</p>
+                </div>
+
+              </div>
+
             </div>
-          </div>
         </Link>
         {props.page === "dashboard" ? (
           <div>
