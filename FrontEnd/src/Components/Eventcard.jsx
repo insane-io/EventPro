@@ -1,19 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import axiosInstance from '../axios';
-import { toast, ToastContainer } from 'react-toastify';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { toast, ToastContainer } from 'react-toastify'
+import {Modal} from "../Components/Modal"
 
 const Eventcard = (props) => {
-  const handleButton = async () => {
-    try {
-      await axiosInstance.post(`event/${props.url}?event_id=${props.id}`);
-      props.onApprove();
-      toast.success("Event Approved")
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
+  const [show, setShow] = useState()
+
+  const handleShow = () => {
+    setShow(true)
+  }
+
+  const handleClose = () => {
+    setShow(false)
+  }
 
   return (
     <>
@@ -30,8 +30,9 @@ const Eventcard = (props) => {
         {props.page === "dashboard" ? (
           <div>
             <div className='flex justify-evenly my-3'>
-              <button className='bg-green-500 p-2 rounded-md text-white hover:scale-105' onClick={handleButton}>Approve</button>
+              <button className='bg-green-500 p-2 rounded-md text-white hover:scale-105' onClick={handleShow}>Approve</button>
               <button className='bg-red-500 p-2 rounded-md text-white hover:scale-105'>Disapprove</button>
+              <Modal showModal={show} handleCloseModal={handleClose} page={"dashboard"} url={props.url} id={props.id} onApprove={props.onApprove}/>
             </div>
             <div className='flex flex-row justify-between mx-5'>
               {props.mentor ? <div>✅ Mentor</div> : <div>❌ Mentor</div>}

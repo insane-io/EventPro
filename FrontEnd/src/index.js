@@ -20,6 +20,7 @@ import { UserProvider } from './Context/MyContext';
 import Approveevents from './Pages/Aprroveevents';
 import DashBoard from './Pages/DashBoard';
 import Roles from './Roles';
+import Registrations from './Pages/Registrations';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
         <Route path='eventinfo/:Id' element={<Eventinfo />} />
         <Route path='myevents' element={<Myevents />} />
         <Route path='profile' element={<Profile />} />
+        <Route path='registrations' element={<Registrations />} />
         <Route path='updateprofile' element={<UpdateProfile />} />
         <Route path='role' element={<Roles />} >
           <Route path='dashboard' element={<DashBoard />} />

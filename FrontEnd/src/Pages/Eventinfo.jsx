@@ -18,7 +18,7 @@ function Eventinfo() {
             .get(`event/event_info/?event_unique_id=${Id}`)
             .then((res) => {
                 setEventInfo(res.data.event);
-                console.log(res.data[0]);
+                console.log(res.data.event.banner);
             })
             .catch((error) => {
                 console.error("Error:", error);
@@ -29,8 +29,7 @@ function Eventinfo() {
         if (login) {
             const formData = new FormData(); 
             formData.append("event_unique_id", Id);
-            axiosInstance
-                .post(`event/register_event/`, formData)
+            axiosInstance.post(`event/register_event/`, formData)
                 .then((res) => {
                     console.log(res?.data);
                     toast.success("Registered successfully!");
@@ -75,7 +74,7 @@ function Eventinfo() {
                     <img
                         className="w-full col-span-2"
                         style={{ boxShadow: "0px 1px 10px grey", borderRadius: "20px", display: "block", Width: "70%", maxHeight: "450px", minHeight: '420px' }}
-                        src={`http://127.0.0.1:8000${eventinfo?.image}`}
+                        src={`http://127.0.0.1:8000${eventinfo?.banner}`}
                         alt="..."
                     />
                     <div

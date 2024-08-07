@@ -9,10 +9,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { login, user } = useContext(MyContext)
   const [progress, setProgress] = useState(0)
-  const [nav, setnav] = useState([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" }])
+  const [nav, setnav] = useState([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" }, { name: 'My registrations', link: "/registrations" }])
   console.log(login)
   useEffect(() => {
-    user === "principal" || user === "hod" || user === "mentor" ? setnav([{ name: 'Dashboard', link: "/role/dashboard" }]) : user === "committee" ? setnav([{ name: 'Committee', link: "/role/committee" }]) : setnav([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" }])
+    user === "principal" || user === "hod" || user === "mentor" ? setnav([{ name: 'Dashboard', link: "/role/dashboard" }]) : user === "committee" ? setnav([{ name: 'Committee', link: "/role/committee" }]) : setnav([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" },{ name: 'My registrations', link: "/registrations" }])
   }, [user])
 
   const loader = (link) => {

@@ -32,7 +32,7 @@ const DashBoard = () => {
     setSidebar(!sidebar);
     localStorage.setItem('dashboardSidebar', !sidebar);
     gsap.to("sidebar", {
-      
+
     })
   };
 
@@ -61,11 +61,11 @@ const DashBoard = () => {
       <div className={`grid grid-cols-5 gap-3`}>
         <div className={`border-2 ${sidebar ? "block col-span-1" : "hidden"} p-3 -translate-y-[4.18rem]`}>
           <h1 className='text-2xl'>Filters</h1>
-          <div className='flex flex-col px-4 text-lg'>
-            <h1><input id='hii' type="checkbox" /><label htmlFor="hii">hiii</label></h1>
-            <h1><input type="checkbox" />Hello</h1>
-            <h1><input type="checkbox" />Hello</h1>
-            <h1><input type="checkbox" />Hello</h1>
+          <div className='flex flex-col px-4 text-lg my-4'>
+            <h1 className='px-2 py-1 border-2 flex justify-between flex-row'>Date <h1>▼</h1></h1>
+            <div className='mx-6'>
+              <h1><input id='hii' type="checkbox" /><label htmlFor="hii">hiii</label></h1>
+            </div>
           </div>
         </div>
         <div className={`${sidebar ? "col-span-4 grid-cols-4" : "col-span-5 grid-cols-5"} grid my-3 mx-5 gap-4`}>
