@@ -104,7 +104,7 @@ const Explore = () => {
           </div>
         </div>
         <div className='col-span-4 md:col-span-4 mt-3 rounded-lg'>
-          <div className='grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-5'>
+          <div className='grid xl:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5'>
             {filteredData.map((event) => (
               <Eventcard img={event.image} Title={event.name} link={`/eventinfo/${event.unique_id}`} sdate={event.start_date} edate={event.end_date} />
             ))}
