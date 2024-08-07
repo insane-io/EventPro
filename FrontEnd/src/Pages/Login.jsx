@@ -31,6 +31,7 @@ const Login = () => {
       axiosInstance.defaults.headers["Authorization"] =
         "Bearer " + localStorage.getItem("access_token");
       setLogin(true)
+      setUser(res.data.role)
       navigate("/profile");
     } catch (error) {
       console.error("Error:", error);

@@ -58,8 +58,8 @@ const Explore = () => {
   return (
     <div className='md:h-screen '>
       <div className='grid grid-cols-5 gap-5 mx-4 '>
-        <div className='col-span-1 h-screen hidden md:block'>
-          <div className='text-black border-2 h-screen rounded-xl mt-4 p-3'>
+        <div className='col-span-1 h-screen hidden md:block '>
+          <div className='text-black bg-[#FFE5E5] h-screen rounded-xl mt-4 p-3'>
             <h1 className='text-black font-semibold mx-3 text-3xl'>Filter By</h1>
             <div className='flex flex-row gap-2 items-center mx-5 mt-3' id='trending' name='trending'>
               <input
@@ -106,7 +106,7 @@ const Explore = () => {
         <div className='col-span-4 md:col-span-4 mt-3 rounded-lg'>
           <div className='grid xl:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5'>
             {filteredData.map((event) => (
-              <Eventcard img={event.image} Title={event.name} link={`/eventinfo/${event.unique_id}`} sdate={event.start_date} edate={event.end_date} />
+              <Eventcard img={event.image} Title={event.name} venue={event.venue.name} address={event.venue.address} link={`/eventinfo/${event.unique_id}`} sdate={event.start_date} edate={event.end_date} />
             ))}
           </div>
         </div>

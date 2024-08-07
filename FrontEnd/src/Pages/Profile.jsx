@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { MyContext } from '../Context/MyContext';
 
 const Profile = () => {
-  const { setLogin } = useContext(MyContext)
+  const { setLogin, setUser } = useContext(MyContext)
   const navigate = useNavigate();
   const [data, setData] = useState('')
   useEffect(() => {
@@ -24,6 +24,7 @@ const Profile = () => {
     axiosInstance.defaults.headers['Authorization'] = null
     setLogin(false)
     navigate('/login');
+    setUser("")
   }
   console.log(data)
   return (
