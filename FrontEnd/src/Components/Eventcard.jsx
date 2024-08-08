@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import axiosInstance from '../axios';
 import { toast, ToastContainer } from 'react-toastify';
 
+const imgae = 'https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjIwMzV8MHwxfGFsbHwxf'
 const Eventcard = (props) => {
+  
   const handleButton = async () => {
     try {
       await axiosInstance.post(`event/${props.url}?event_id=${props.id}`);

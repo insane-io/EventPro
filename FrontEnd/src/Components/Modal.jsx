@@ -28,11 +28,11 @@ export const Modal = ({ handleCloseModal, modalContent, showModal }) => {
                             <div className="mb-4">
                                 <div className="flex items-center">
                                     <img
-                                        src="profile1.jpg"
-                                        alt="Profile 1"
+                                        src={modalContent.profile_image}
+                                        alt={modalContent.first_name}
                                         className="w-12 h-12 rounded-full"
                                     />
-                                    <p className="ml-2 text-3xl font-bold text-[#FF6B66]">Profile 1 Name</p>
+                                    <p className="ml-2 text-3xl font-bold text-[#FF6B66]">{modalContent.first_name}</p>
                                 </div>
                                 <textarea
                                     className="appearance-none border-white rounded w-full py-2 px-3"

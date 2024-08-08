@@ -12,7 +12,7 @@ const Navbar = () => {
   const [nav, setnav] = useState([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" }])
   console.log(login)
   useEffect(() => {
-    user === "principal" || user === "hod" || user === "mentor" ? setnav([{ name: 'Dashboard', link: "/role/dashboard" }]) : user === "committee" ? setnav([{ name: 'Committee', link: "/role/committee" }]) : setnav([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" }])
+    user === "principal" || user === "hod" || user === "mentor" ? setnav([{ name: 'Dashboard', link: "/role/dashboard" }]) : user === "committee" ? setnav([{ name: 'Committee', link: "/role/committee" }, { name: 'My Events', link: "/role/myevents" }]) : setnav([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" },{ name: 'My registrations', link: "/registrations" }])
   }, [user])
 
   const loader = (link) => {

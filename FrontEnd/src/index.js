@@ -36,13 +36,14 @@ const router = createBrowserRouter(
         <Route path='' element={<Home />} />
         <Route path='events' element={<Events />} />
         <Route path='eventinfo/:Id' element={<Eventinfo />} />
-        <Route path='myevents' element={<Myevents />} />
+        
         <Route path='profile' element={<Profile />} />
         <Route path='updateprofile' element={<UpdateProfile />} />
         <Route path='role' element={<Roles />} >
           <Route path='dashboard' element={<DashBoard />} />
           <Route path='committee' element={<Commiteehome />} />
           <Route path='addevent' element={<Addevent />} />
+          <Route path='myevents' element={<Myevents />} />
         </Route>
       </Route>
     </Route>
