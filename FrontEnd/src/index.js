@@ -10,7 +10,6 @@ import PermissionDenied from './Pages/Permissiondenied';
 import Login from './Pages/Login';
 import Home from './Pages/Home';
 import Eventinfo from './Pages/Eventinfo';
-import Myevents from './Pages/Myevents';
 import Profile from './Pages/Profile';
 import UpdateProfile from './Pages/Updateprofile';
 import BaseLayout from './Layout/baselayout';
@@ -21,7 +20,6 @@ import Approveevents from './Pages/Aprroveevents';
 import DashBoard from './Pages/DashBoard';
 import Roles from './Roles';
 import Registrations from './Pages/Registrations';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -37,7 +35,6 @@ const router = createBrowserRouter(
         <Route path='' element={<Home />} />
         <Route path='events' element={<Events />} />
         <Route path='eventinfo/:Id' element={<Eventinfo />} />
-        <Route path='myevents' element={<Myevents />} />
         <Route path='profile' element={<Profile />} />
         <Route path='registrations' element={<Registrations />} />
         <Route path='updateprofile' element={<UpdateProfile />} />

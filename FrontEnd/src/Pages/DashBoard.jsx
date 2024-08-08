@@ -3,7 +3,6 @@ import { MyContext } from "../Context/MyContext";
 import Eventcard from "../Components/Eventcard";
 import axiosInstance from "../axios";
 import gsap from 'gsap';
-import { ToastContainer, toast } from 'react-toastify';
 
 const DashBoard = () => {
   const { user } = useContext(MyContext);
@@ -20,7 +19,7 @@ const DashBoard = () => {
       try {
         const res = await axiosInstance.get('/event/unapproved_event/');
         setData(res?.data);
-        console.log(res.data[0].unique_id);
+        console.log(res.data);
       } catch (error) {
         console.error(error);
       }
@@ -70,7 +69,7 @@ const DashBoard = () => {
         </div>
         <div className={`${sidebar ? "col-span-4 grid-cols-3" : "col-span-5 grid-cols-5"} grid my-3 mx-5 gap-4`}>
           {filteredData.map((event) => (
-            <Eventcard key={event.id} img={event?.image} Title={event?.name} link={`/eventinfo/${event?.unique_id}`} sdate={event?.start_date} edate={event?.end_date} page={"dashboard"} mentor={event?.approved_by_mentor} hod={event?.approved_by_hod} dean={event?.approved_by_dean} url={url} id={event.id} onApprove={handleUpdate} />
+            <Eventcard key={event.id} img={event?.image} Title={event?.name} link={`/eventinfo/${event?.unique_id}`} sdate={event?.start_date} edate={event?.end_date} page={"dashboard"} mentor={event?.approved_by_mentor} hod={event?.approved_by_hod} dean={event?.approved_by_dean} url={url} id={event.unique_id} onApprove={handleUpdate} />
           ))}
         </div>
       </div>

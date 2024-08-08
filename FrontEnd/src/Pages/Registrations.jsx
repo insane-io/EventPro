@@ -3,7 +3,7 @@ import EventRegistrations from '../Components/EventRegistrations'
 
 const Registrations = () => {
   return (
-    <div className='px-40 grid grid-cols-2 gap-7 my-10'>
+    <div className='xl:px-40 lg:px-20 md:px-20 grid lg:grid-cols-2 grid-cols-1 px-5 gap-7 my-10'>
       <EventRegistrations/>
       <EventRegistrations/>
       <EventRegistrations/>
@@ -11,7 +11,6 @@ const Registrations = () => {
       <EventRegistrations/>
       <EventRegistrations/>
       <EventRegistrations/>
-
     </div>
   )
 }

@@ -2,10 +2,13 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../axios";
 import { MyContext } from "../Context/MyContext"
+import login_img from "../Assets/login img.jpg"
+
 const Login = () => {
 
   const { setLogin, setUser } = useContext(MyContext)
   const navigate = useNavigate();
+  const [staff, setStaff] = useState("baseUser")
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -43,9 +46,19 @@ const Login = () => {
     <>
       <div className="grid grid-cols-5">
         <div className="col-span-3 m-12">
-          <img src="https://images.squarespace-cdn.com/content/v1/6362a31ebcf57907d45a58bc/4caac7f7-353a-45d6-8817-8e8a4a4fb853/wordsmith-custom-blog-Internal-communications-importing-marketing-lessons.png?format=1500w" alt="random" className="w-11/12"/>
+          {
+            staff === "baseUser" ? (
+              <img src="https://images.squarespace-cdn.com/content/v1/6362a31ebcf57907d45a58bc/4caac7f7-353a-45d6-8817-8e8a4a4fb853/wordsmith-custom-blog-Internal-communications-importing-marketing-lessons.png?format=1500w" alt="random" className="w-11/12 h-[29rem]"/>
+            ) : (
+          <img src={login_img} alt="random" className="w-11/12 h-11/12"/>
+            )
+          }
         </div>
-        <form method="post" className="col-span-2 m-16 flex flex-col justify-center" >
+        <div className="col-span-2 m-16 flex flex-col justify-center" >
+          <div className="flex w-full">
+            <button onClick={()=>{setStaff("baseUser")}} className={`mx-auto border-2 w-full py-1 rounded-md ${staff !=="baseUser" ? " text-[#FF6B66]" : "bg-[#FF6B66] text-white"}`}>User</button>
+            <button onClick={()=>{setStaff("staff")}} className={`mx-auto border-2 w-full py-1 rounded-md bg-[#] ${staff !== "staff" ? " text-[#FF6B66]" : "bg-[#FF6B66] text-white"}`}>Staff</button>
+          </div>
           <label htmlFor="user-email" className="text-[#FF6B66] text-md font-bold" style={{ paddingTop: "13px" }}>
             Email
           </label>
@@ -86,7 +99,7 @@ const Login = () => {
               Don't Have an account?
             </Link>
           </a>
-        </form>
+        </div>
       </div>
     </>
   );

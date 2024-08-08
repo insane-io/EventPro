@@ -2,10 +2,12 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../axios";
 import { MyContext } from "../Context/MyContext";
+import image from "../Assets/register.jpg"
 
 const Register = () => {
 
   const { setLogin, setUid } = useContext(MyContext)
+  const [staff, setStaff] = useState("baseUser")
   const [formData, setFormData] = useState({
     email: "",
     password1: "",
@@ -59,10 +61,20 @@ const Register = () => {
   return (
     <div className="grid grid-cols-5">
       <div className="col-span-3">
-        <img src="https://huddle.day/assets/templates/basic/frontend2/media-uploader/join-us.png" alt="random" />
+        {
+            staff === "baseUser" ? (
+              <img src="https://huddle.day/assets/templates/basic/frontend2/media-uploader/join-us.png" alt="random" className=""/>
+            ) : (
+          <div className="flex justify-center w-full items-center h-[38rem]"><img src={image} alt="random" className="w-5/6"/></div>
+            )
+          }
       </div>
       <div className="col-span-2 flex items-center justify-center">
-        <form onSubmit={handleSave} className="flex flex-col w-4/5 justify-center my-24">
+        <div onSubmit={handleSave} className="flex flex-col w-4/5 justify-center my-24">
+          <div className="flex w-full">
+            <button onClick={() => { setStaff("baseUser") }} className={`mx-auto border-2 w-full py-1 rounded-md ${staff !== "baseUser" ? " text-[#FF6B66]" : "bg-[#FF6B66] text-white"}`}>User</button>
+            <button onClick={() => { setStaff("staff") }} className={`mx-auto border-2 w-full py-1 rounded-md bg-[#] ${staff !== "staff" ? " text-[#FF6B66]" : "bg-[#FF6B66] text-white"}`}>Staff</button>
+          </div>
           <label htmlFor="username" className="text-[#FF6B66] text-md font-bold" style={{ paddingTop: "13px" }}>
             &nbsp;Username
           </label>
@@ -154,7 +166,7 @@ const Register = () => {
           <Link to="/login" className="flex justify-center mb-4 text-[#FF6B66]">
             Already a user? Sign-In
           </Link>
-        </form>
+        </div>
       </div>
     </div>
   );

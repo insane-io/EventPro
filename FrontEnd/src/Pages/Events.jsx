@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Eventcard from "../Components/Eventcard"
-import { Link } from 'react-router-dom';
 
 const Explore = () => {
   const [data, setData] = useState([]);
@@ -18,7 +17,6 @@ const Explore = () => {
         const response = await axios.get('http://127.0.0.1:8000/event/event_info/');
         if (Array.isArray(response.data.events)) {
           setData(response.data.events);
-          console.log(response.data);
         } else {
           console.error("Data is not an array:", response.data.events);
         }
@@ -56,11 +54,11 @@ const Explore = () => {
   });
 
   return (
-    <div className='md:h-screen '>
+    <div className='md:h-screen md:mt-10 lg:mt-0 '>
       <div className='grid grid-cols-5 gap-5 mx-4 '>
         <div className='col-span-1 h-screen hidden md:block '>
-          <div className='text-black bg-[#FFE5E5] h-screen rounded-xl mt-4 p-3'>
-            <h1 className='text-black font-semibold mx-3 text-3xl'>Filter By</h1>
+          <div className='text-black bg-[#FFE5E5] h-screen rounded-xl mt-4 lg:p-3'>
+            <h1 className='text-black font-semibold mx-3 lg:text-3xl text-xl'>Filter By</h1>
             <div className='flex flex-row gap-2 items-center mx-5 mt-3' id='trending' name='trending'>
               <input
                 type="checkbox"
@@ -69,7 +67,7 @@ const Explore = () => {
                 onChange={() => handleFilterChange('technical')}
                 className='size-4'
               />
-              <label htmlFor='trendingCheckbox' className='text-xl'>Technical Events</label>
+              <label htmlFor='trendingCheckbox' className='lg:text-xl text-md'>Technical Events</label>
             </div>
             <div className='flex flex-row gap-2 items-center mx-5'>
               <input
@@ -79,7 +77,7 @@ const Explore = () => {
                 onChange={() => handleFilterChange('cultural')}
                 className='size-4'
               />
-              <label htmlFor='adventureCheckbox' className='text-xl'>Cultural Events</label>
+              <label htmlFor='adventureCheckbox' className='lg:text-xl text-md'>Cultural Events</label>
             </div>
             <div className='flex flex-row gap-2 items-center mx-5'>
               <input
@@ -89,7 +87,7 @@ const Explore = () => {
                 onChange={() => handleFilterChange('sports')}
                 className='size-4'
               />
-              <label htmlFor='beachCheckbox' className='text-xl'>Sports</label>
+              <label htmlFor='beachCheckbox' className='lg:text-xl text-md'>Sports</label>
             </div>
             <div className='flex flex-row gap-2 items-center mx-5'>
               <input
@@ -99,14 +97,14 @@ const Explore = () => {
                 onChange={() => handleFilterChange('gaming')}
                 className='size-4'
               />
-              <label htmlFor='heritageCheckbox' className='text-xl'>Gaming Events</label>
+              <label htmlFor='heritageCheckbox' className='lg:text-xl text-md'>Gaming Events</label>
             </div>
           </div>
         </div>
-        <div className='col-span-4 md:col-span-4 mt-3 rounded-lg'>
-          <div className='grid xl:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5'>
+        <div className='col-span-5 md:col-span-4 mt-3 rounded-lg'>
+          <div className='grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
             {filteredData.map((event) => (
-              <Eventcard img={event.image} Title={event.name} venue={event.venue.name} address={event.venue.address} link={`/eventinfo/${event.unique_id}`} sdate={event.start_date} edate={event.end_date} />
+              <Eventcard img={event.banner} Title={event.name} venue={event.venue.name} address={event.venue.address} link={`/eventinfo/${event.unique_id}`} sdate={event.start_date} edate={event.end_date} />
             ))}
           </div>
         </div>

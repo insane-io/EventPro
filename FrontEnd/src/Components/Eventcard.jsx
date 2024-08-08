@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import { Modal } from "../Components/Modal"
-import image from "../Assets/comittee img.svg"
 
 const Eventcard = (props) => {
-
+  const [button, setButton] = useState()
   const [show, setShow] = useState()
 
-  const handleShow = () => {
+  const handleShow = (value) => {
     setShow(true)
+    setButton(value)
   }
 
   const handleClose = () => {
@@ -49,15 +49,10 @@ const Eventcard = (props) => {
           {props.page === "dashboard" ? (
             <>
               <div className='flex justify-around pb-4'>
-                <button className='bg-green-500 p-2 rounded-md text-white hover:scale-105' onClick={handleShow}>Approve</button>
-                <button className='bg-red-500 p-2 rounded-md text-white hover:scale-105'>Disapprove</button>
-                <Modal showModal={show} handleCloseModal={handleClose} page={"dashboard"} url={props.url} id={props.id} onApprove={props.onApprove} />
+                <button className='bg-green-500 p-2 rounded-md text-white hover:scale-105' onClick={()=>handleShow("approve")}>Approve</button>
+                <button className='bg-red-500 p-2 rounded-md text-white hover:scale-105' onClick={()=>handleShow("disapprove")}>Disapprove</button>
+                <Modal showModal={show} button={button} handleCloseModal={handleClose} page={"dashboard"} url={props.url} id={props.id} onApprove={props.onApprove} />
               </div>
-              {/* <div className='flex flex-row justify-between mx-5'>
-                  {props.mentor ? <div>✅ Mentor</div> : <div>❌ Mentor</div>}
-                  {props.hod ? <div>✅ HOD</div> : <div>❌ HOD</div>}
-                  {props.dean ? <div>✅ Dean</div> : <div>❌ Dean</div>}
-                </div> */}
             </>
           ) : null}
         </div>
