@@ -8,11 +8,13 @@ const Myevents = () => {
   useEffect(() => {
     async function getdata() {
       try {
-        const res = await axiosInstance.get('/event/event_info/');
-        console.log(res.data);
-        setEvents(res.data.events);
+        const res = await axiosInstance.get('/event/my_events/');
+
+
+        setEvents(res.data);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setEvents([]);
       }
     }
     getdata();

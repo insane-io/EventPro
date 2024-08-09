@@ -27,7 +27,7 @@ const EmpEvent = () => {
     gsap.to('#bar', {
       width: `${progress}%`,
       duration: 3,
-    })
+    });
   }, [formData, progress]);
 
   const handleDropdownToggle = () => {
@@ -36,13 +36,6 @@ const EmpEvent = () => {
 
   const handleChange = (e, key) => {
     let value = e.target.value;
-
-    if (e.target.type === 'date') {
-      const date = new Date(value);
-      const formattedDate = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}`;
-      value = formattedDate;
-    }
-
     setFormData({
       ...formData,
       [key]: value,
@@ -194,7 +187,7 @@ const EmpEvent = () => {
                         <input
                           id="default-radio-1"
                           type="radio"
-                          value="1"
+                          value="Smartclassroom1"
                           name="venue"
                           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                           onChange={() => handleDropdownSelect('Smartclassroom1', 'venue')}
@@ -212,7 +205,7 @@ const EmpEvent = () => {
                         <input
                           id="default-radio-2"
                           type="radio"
-                          value="2"
+                          value="Smartclassroom2"
                           name="venue"
                           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                           onChange={() => handleDropdownSelect('Smartclassroom2', 'venue')}
@@ -230,7 +223,7 @@ const EmpEvent = () => {
                         <input
                           id="default-radio-3"
                           type="radio"
-                          value="3"
+                          value="Smartclassroom3"
                           name="venue"
                           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                           onChange={() => handleDropdownSelect('Smartclassroom3', 'venue')}
@@ -240,24 +233,6 @@ const EmpEvent = () => {
                           className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                         >
                           Smartclassroom3
-                        </label>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="flex items-center">
-                        <input
-                          id="default-radio-4"
-                          type="radio"
-                          value="4"
-                          name="venue"
-                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                          onChange={() => handleDropdownSelect('Smartclassroom4', 'venue')}
-                        />
-                        <label
-                          htmlFor="default-radio-4"
-                          className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                        >
-                          Smartclassroom4
                         </label>
                       </div>
                     </li>
@@ -274,9 +249,11 @@ const EmpEvent = () => {
             <input type="text" className="w-full p-2 border rounded" id="inputDomain" onChange={(e) => handleChange(e, 'domain')} />
           </div>
 
-          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
-            Submit
-          </button>
+          <div className="text-center">
+            <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </div>

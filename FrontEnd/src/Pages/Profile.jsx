@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom';
 import { MyContext } from '../Context/MyContext';
 
 const Profile = () => {
-  const { setLogin, login } = useContext(MyContext)
+  const { setLogin, setUser } = useContext(MyContext)
   const navigate = useNavigate();
   const [data, setData] = useState('')
   useEffect(() => {
-    axiosInstance.get('user/get_userprofile/')
+    axiosInstance.get(`user/get_userprofile/`)
       .then((res) => {
         setData(res.data)
+        console.log("oyeeeee")
       })
   }, [])
 
@@ -23,6 +24,7 @@ const Profile = () => {
     axiosInstance.defaults.headers['Authorization'] = null
     setLogin(false)
     navigate('/login');
+    setUser("")
   }
   console.log(data)
   return (

@@ -18,7 +18,6 @@ function Eventinfo() {
             .get(`event/event_info/?event_unique_id=${Id}`)
             .then((res) => {
                 setEventInfo(res.data.event);
-                console.log(res.data[0]);
             })
             .catch((error) => {
                 console.error("Error:", error);
@@ -29,8 +28,7 @@ function Eventinfo() {
         if (login) {
             const formData = new FormData(); 
             formData.append("event_unique_id", Id);
-            axiosInstance
-                .post(`event/register_event/`, formData)
+            axiosInstance.post(`event/register_event/`, formData)
                 .then((res) => {
                     console.log(res?.data);
                     toast.success("Registered successfully!");
@@ -74,17 +72,17 @@ function Eventinfo() {
                 <div className="grid flex-row gap-12 m-2 page-detail lg:grid-cols-3 lg:m-5 ">
                     <img
                         className="w-full col-span-2"
-                        style={{ boxShadow: "0px 1px 10px grey", borderRadius: "20px", display: "block", Width: "70%", maxHeight: "450px", minHeight: '420px' }}
-                        src={`http://127.0.0.1:8000${eventinfo?.image}`}
+                        style={{ boxShadow: "0px 1px 10px grey", borderRadius: "20px", display: "block", Width: "70%", maxHeight: "500px", minHeight: '420px' }}
+                        src={`http://127.0.0.1:8000${eventinfo?.banner}`}
                         alt="..."
                     />
                     <div
-                        className="col-10 col-lg-4 col-sm-10 card max-h-max"
+                        className="col-10 col-lg-4 col-sm-10 card h-[32rem] max-md:relative right-20 w-[30%]"
                         style={{
                             border: "none",
                             borderRadius: "20px",
                             boxShadow: "0px 1px 10px grey",
-                            position: "relative",
+                            position: "fixed",
                         }}
                     >
                         <div className="flex flex-col details" style={{ border: 'none' }}>
@@ -113,7 +111,7 @@ function Eventinfo() {
                         </button>
                     </div>
                 </div>
-                <div className="m-5 md:ms-4 md:w-4/6">
+                <div className="m-5 md:ms-4 md:w-7/12">
                     <div className="text-lg"><b>About</b></div>
                     <p className="mb-4 col-12 col-lg-8" style={{ height: "2px", backgroundColor: "#dddddd", }}></p>
                     <p className="about ">{eventinfo?.description}</p>
