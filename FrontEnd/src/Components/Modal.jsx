@@ -8,13 +8,11 @@ export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id
     useEffect(() => {
         setContent(modalContent);
     }, [modalContent]);
-
-    console.log(id)
-
+    
     const handleButton = async () => {
         try {
             if (button === "approve") {
-                await axiosInstance.post(`event/${url}?event_id=${id}`, { message: content, hello: content })
+                await axiosInstance.post(`event/${url}?event_id=${id}`, { message: content })
                 console.log("Event disapproved")
             } else if (button === "disapprove") {
                 await axiosInstance.post(`event/disapprove/?event_id=${id}`)
@@ -45,7 +43,7 @@ export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id
                             <div className="mb-4">
                                 {
                                     page === "dashboard" ? (
-                                        <div className='text-[#FF6B66] font-bold text-2xl underline mb-5'>Enter Reason</div>
+                                        <div className={`${button === "approve" ? 'text-green-400' : 'text-red-400'} font-bold text-2xl underline mb-5`}>Enter Reason</div>
                                     ) : (
                                         <div className="flex items-center">
                                             <img
@@ -63,7 +61,7 @@ export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id
                                     id="description"
                                     name="description"
                                     placeholder={page === "dashboard" ? "Reason" : "Description"}
-                                    value={content ?? ""} // Use `??` to default to an empty string if `content` is null or undefined
+                                    value={content} 
                                     onChange={(e) => setContent(e.target.value)}
                                 />
 

@@ -34,7 +34,8 @@ const Login = () => {
       axiosInstance.defaults.headers["Authorization"] =
         "Bearer " + localStorage.getItem("access_token");
       setLogin(true)
-      setUser(res.data.role)
+      res.data.role === null ? setUser("undefined") :setUser(res.data.role);
+      res.data.role === null ? localStorage.setItem("role", "undefined") : localStorage.setItem("role", res.data.role)
       navigate("/profile");
     } catch (error) {
       console.error("Error:", error);
@@ -45,7 +46,7 @@ const Login = () => {
   return (
     <>
       <div className="grid grid-cols-5">
-        <div className="col-span-3 m-12">
+        <div className="col-span-3 ">
           {
             staff === "baseUser" ? (
               <img src="https://images.squarespace-cdn.com/content/v1/6362a31ebcf57907d45a58bc/4caac7f7-353a-45d6-8817-8e8a4a4fb853/wordsmith-custom-blog-Internal-communications-importing-marketing-lessons.png?format=1500w" alt="random" className="w-11/12 h-[29rem]"/>

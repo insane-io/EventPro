@@ -26,7 +26,7 @@ export const Commiteehistory = ({ events }) => {
               <div className=' grid grid-cols-12 p-3'>
                 <div className='col-span-2'>
                   <div className='flex flex-col'>
-                    <img src={event.image} className='rounded ' alt={event.name} />
+                    <img src={`http://127.0.0.1:8000/${event.banner}`} className='rounded h-40' alt={event.name} />
                   </div>
                 </div>
                 <div className='col-span-8 ms-4'>
@@ -35,7 +35,6 @@ export const Commiteehistory = ({ events }) => {
                     <span
                       className={`flex items-center justify-center w-6 h-6 rounded-full text-white ${event.is_approved ? 'bg-green-500' : 'bg-red-500'}`}
                       style={{ fontSize: '12px' }}>
-                      
                     </span>
                   </p>
                   <p className='text-l text-[#FF6B66] '><strong> Venue :</strong> {event.venue.address}</p>
@@ -43,7 +42,14 @@ export const Commiteehistory = ({ events }) => {
                   {event.approvals.map(approval => (
                     <div key={approval.id} className='flex gap-5 m-2'>
                       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <img src={approval.user.profile_image} alt={approval.user.first_name} onClick={() => handleOpenModal(approval.user)} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+                        {
+                          approval.user.profile_image === null ? 
+                          (
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg" alt="" onClick={() => handleOpenModal(approval.user)} style={{ width: '50px', height: '50px', borderRadius: '50%' }}/>
+                          ) : (
+                            <img src={`http://127.0.0.1:8000${approval.user.profile_image}`} alt={approval.user.first_name} onClick={() => handleOpenModal(approval.user)} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+                          )
+                        }
                         <p className='text-[#FF6B66] text-sm'>{approval.user.first_name}</p>
                       </div>
                     </div>

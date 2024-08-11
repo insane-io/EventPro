@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import defaultImg from '../Assets/profile.webp';
 import axiosInstance from '../axios'; // Import your axios instance
+import { MyContext } from '../Context/MyContext';
 
 const UpdateProfile = () => {
     const [profileImg, setProfileImg] = useState(defaultImg);
     const [phone, setPhone] = useState('');
     const [branch, setBranch] = useState('');
+    const {uid} = useContext(MyContext)
+
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -25,6 +28,7 @@ const UpdateProfile = () => {
         const formData = new FormData();
         formData.append('phone_number', phone);
         formData.append('branch', branch);
+        formData.append('unique_id', uid)
 
         axiosInstance.post('user/post_userprofile/', formData)
         .then((res) => {

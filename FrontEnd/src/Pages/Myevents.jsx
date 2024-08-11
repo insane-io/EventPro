@@ -9,9 +9,8 @@ const Myevents = () => {
     async function getdata() {
       try {
         const res = await axiosInstance.get('/event/my_events/');
-
-
         setEvents(res.data);
+        console.log(res.data);
       } catch (error) {
         console.error("Error fetching data:", error);
         setEvents([]);

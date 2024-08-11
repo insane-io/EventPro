@@ -3,11 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../axios";
 import { MyContext } from "../Context/MyContext";
 import image from "../Assets/register.jpg"
+import { toast } from "react-toastify";
 
 const Register = () => {
 
-  const { setLogin, setUid } = useContext(MyContext)
-  const [staff, setStaff] = useState("baseUser")
+  const { setLogin, setUid, setUser } = useContext(MyContext)
+  const [staff, setStaff] = useState()
   const [formData, setFormData] = useState({
     email: "",
     password1: "",
@@ -25,7 +26,7 @@ const Register = () => {
   };
 
   const handleSave = async (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); 
 
     if (formData.password1 !== formData.password2) {
       // toast.error("Passwords do not match");
@@ -33,23 +34,24 @@ const Register = () => {
     }
 
     try {
-      const res = await axiosInstance.post(`/authentication/signup/`, {
+      const res = await axiosInstance.post(`${staff === "baseUser" ? '/authentication/signup/' : '/authentication/special_signup/'}`, {
         email: formData.email,
         username: formData.username,
         first_name: formData.first_name,
         last_name: formData.last_name,
-        // phone: formData.phone,
         password: formData.password1,
       });
       console.log(res);
       console.log("Registered successfully");
       setLogin(true)
-
       localStorage.setItem("access_token", res.data.access);
       localStorage.setItem("refresh_token", res.data.refresh);
+      res.data.role === null ? setUser("undefined") : setUser(res.data.role);
+      res.data.role === null ? localStorage.setItem("role", "undefined") : localStorage.setItem("role", res.data.role)
       axiosInstance.defaults.headers["Authorization"] =
         "JWT " + localStorage.getItem("access_token");
       console.log("Navigating");
+      setUser(res.data.role)
       const decode = res.data.access
       setUid(decode.user_id)
       navigate("/");
@@ -70,7 +72,7 @@ const Register = () => {
           }
       </div>
       <div className="col-span-2 flex items-center justify-center">
-        <div onSubmit={handleSave} className="flex flex-col w-4/5 justify-center my-24">
+        <div className="flex flex-col w-4/5 justify-center my-24">
           <div className="flex w-full">
             <button onClick={() => { setStaff("baseUser") }} className={`mx-auto border-2 w-full py-1 rounded-md ${staff !== "baseUser" ? " text-[#FF6B66]" : "bg-[#FF6B66] text-white"}`}>User</button>
             <button onClick={() => { setStaff("staff") }} className={`mx-auto border-2 w-full py-1 rounded-md bg-[#] ${staff !== "staff" ? " text-[#FF6B66]" : "bg-[#FF6B66] text-white"}`}>Staff</button>
@@ -159,6 +161,7 @@ const Register = () => {
           <div className="form-border"></div>
           <button
             type="submit"
+            onClick={handleSave}
             className="bg-[#FF6B66] hover:bg-gray-900 w-full text-white font-thin py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline mt-5"
           >
             Register

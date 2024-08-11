@@ -11,6 +11,7 @@ function Eventinfo() {
     const { Id } = params;
     const navigate = useNavigate()
     const [eventinfo, setEventInfo] = useState();
+    const [EventId, setEventId] = useState()
     const { login } = useContext(MyContext)
 
     useEffect(() => {
@@ -18,17 +19,16 @@ function Eventinfo() {
             .get(`event/event_info/?event_unique_id=${Id}`)
             .then((res) => {
                 setEventInfo(res.data.event);
+                setEventId(res.data.event.unique_id)
             })
             .catch((error) => {
                 console.error("Error:", error);
             });
     }, []);
-
+    
     const handleSubmit = () => {
         if (login) {
-            const formData = new FormData(); 
-            formData.append("event_unique_id", Id);
-            axiosInstance.post(`event/register_event/`, formData)
+            axiosInstance.post(`event/register_event/?event_unique_id=${EventId}`)
                 .then((res) => {
                     console.log(res?.data);
                     toast.success("Registered successfully!");

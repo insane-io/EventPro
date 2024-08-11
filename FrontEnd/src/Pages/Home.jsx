@@ -55,7 +55,7 @@ const Home = () => {
         <h1 className='flex flex-col text-center md:gap-9 font-thin'><p className='lg:text-5xl text-3xl font-bold text-[#FF6B66]'>Academic Events</p><span className='lg:text-3xl md:text-xl font-thin'>Join us for an insightful lecture on [Topic] by [Speaker's Name], a renowned expert in the field. This is a unique opportunity to deepen your understanding and engage in stimulating discussions.</span></h1>
         <img src={img2} alt="" className='block md:hidden'/>
         <h1 className='flex flex-col text-center md:gap-9'><p className='lg:text-5xl text-3xl font-bold text-[#FF6B66]'>Cultural Events</p><span className='lg:text-3xl md:text-xl font-thin'>Get ready to be dazzled by the rhythm and grace of our Dance Show! From classical ballet to contemporary dance, our performers will take you on a mesmerizing journey through movement. Don't miss this chance to witness the beauty and artistry of dance. Mark your calendars and join us for a spectacular show</span></h1>
-        <img src={img2} alt="" className='hidden md:block'/>
+        <img src={img2} alt="" className='hidden md:block w-full'/>
         <img src={img3} alt=""/>
         <h1 className='flex flex-col text-center md:gap-9'><p className='lg:text-5xl md:text-3xl font-bold text-[#FF6B66]'>Sports Events</p><span className='lg:text-3xl md:text-xl font-thin'>Get ready for an action-packed day filled with thrilling competitions and fun activities. Whether you're an athlete or a fan, come and be part of the excitement. Cheer on your favorite teams and enjoy a day of sportsmanship and camaraderie. Don't miss out—see you there!</span></h1>
       </div>

@@ -8,7 +8,7 @@ const Roles = () => {
   const { user } = useContext(MyContext)
   return (
     <div>
-      { user === "principal" || user === "hod" || user === "mentor" || user === "committee" ? <Outlet /> : <Permissiondenied />}
+      { user === "Principal" || user === "HOD" || user === "Mentor" || user === "Committee" ? <Outlet /> : <Permissiondenied />}
     </div>
   )
 }

@@ -36,13 +36,13 @@ const DashBoard = () => {
   };
 
   useEffect(() => {
-    if (user === "principal") {
+    if (user === "Principal") {
       setFilteredData(data.filter((event) => event.approved_by_mentor === true && event.approved_by_hod === true && event.approved_by_dean === false));
       setUrl('approve_by_dean/');
-    } else if (user === "hod") {
+    } else if (user === "HOD") {
       setFilteredData(data.filter((event) => event.approved_by_dean === false && event.approved_by_mentor === true && event.approved_by_hod === false));
       setUrl('approve_by_hod/');
-    } else if (user === "mentor") {
+    } else if (user === "Mentor") {
       setFilteredData(data.filter((event) => event.approved_by_mentor === false && event.approved_by_dean === false && event.approved_by_hod === false));
       setUrl('approve_by_mentor/');
     }
@@ -67,7 +67,7 @@ const DashBoard = () => {
             </div>
           </div>
         </div>
-        <div className={`${sidebar ? "col-span-4 grid-cols-3" : "col-span-5 grid-cols-5"} grid my-3 mx-5 gap-4`}>
+        <div className={`${sidebar ? "col-span-4 grid-cols-3" : "col-span-5 grid-cols-4"} grid my-3 mx-5 gap-4`}>
           {filteredData.map((event) => (
             <Eventcard key={event.id} img={event?.image} Title={event?.name} link={`/eventinfo/${event?.unique_id}`} sdate={event?.start_date} edate={event?.end_date} page={"dashboard"} mentor={event?.approved_by_mentor} hod={event?.approved_by_hod} dean={event?.approved_by_dean} url={url} id={event.unique_id} onApprove={handleUpdate} />
           ))}

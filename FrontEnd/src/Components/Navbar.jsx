@@ -9,10 +9,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { login, user } = useContext(MyContext)
   const [progress, setProgress] = useState(0)
-  const [nav, setnav] = useState([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" }, { name: 'My registrations', link: "/registrations" }])
+  const [nav, setnav] = useState([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" }])
   console.log(login)
   useEffect(() => {
-    user === "principal" || user === "hod" || user === "mentor" ? setnav([{ name: 'Dashboard', link: "/role/dashboard" }]) : user === "committee" ? setnav([{ name: 'Committee', link: "/role/committee" }, { name: 'My Events', link: "/role/myevents" }]) : setnav([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" },{ name: 'My registrations', link: "/registrations" }])
+    user === "Principal" || user === "HOD" || user === "Mentor" ? setnav([{ name: 'Dashboard', link: "/role/dashboard" }]) : user === "Committee" ? setnav([{ name: 'Committee', link: "/role/committee" }, { name: 'My Events', link: "/role/myevents" }]) : setnav([{ name: 'Home', link: "/" }, { name: 'Events', link: "/events" }])
   }, [user])
 
   const loader = (link) => {
@@ -20,7 +20,8 @@ const Navbar = () => {
     setTimeout(() => {
       navigate(link)
       setProgress(100)
-    }, 50)}
+    }, 50)
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -49,9 +50,17 @@ const Navbar = () => {
               </li>
             ))}
             {login ? (
-              <li>
-                <NavLink onClick={() => { loader('profile') }} to="/Profile" className={({ isActive }) => isActive ? `block py-2 px-3 rounded text-[#FF6B66]` : `hover:text-[#FF6B66] block py-2 px-3 rounded text-black`}>Profile</NavLink>
-              </li>
+              <>
+              {
+                user === "BaseUser" ? 
+                (<li>
+                  <NavLink onClick={() => { loader('registrations') }} to="/registrations" className={({ isActive }) => isActive ? `block py-2 px-3 rounded text-[#FF6B66]` : `hover:text-[#FF6B66] block py-2 px-3 rounded text-black`}>My registrations</NavLink>
+                </li>) : null
+              }
+                <li>
+                  <NavLink onClick={() => { loader('profile') }} to="/Profile" className={({ isActive }) => isActive ? `block py-2 px-3 rounded text-[#FF6B66]` : `hover:text-[#FF6B66] block py-2 px-3 rounded text-black`}>Profile</NavLink>
+                </li>
+              </>
             ) : (
               <li>
                 <NavLink onClick={() => { loader('login') }} to="/login" className={({ isActive }) => isActive ? `block py-2 px-3 rounded text-[#FF6B66]` : `hover:text-[#FF6B66] block py-2 px-3 rounded text-black`}>Login</NavLink>
