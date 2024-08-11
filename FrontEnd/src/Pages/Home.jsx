@@ -59,7 +59,7 @@ const Home = () => {
         <img src={img3} alt=""/>
         <h1 className='flex flex-col text-center md:gap-9'><p className='lg:text-5xl md:text-3xl font-bold text-[#FF6B66]'>Sports Events</p><span className='lg:text-3xl md:text-xl font-thin'>Get ready for an action-packed day filled with thrilling competitions and fun activities. Whether you're an athlete or a fan, come and be part of the excitement. Cheer on your favorite teams and enjoy a day of sportsmanship and camaraderie. Don't miss out—see you there!</span></h1>
       </div>
-      <div className='mx-6'>
+      {/* <div className='mx-6'>
         {data && (
           <>
             <div >
@@ -87,7 +87,7 @@ const Home = () => {
             </div>
           </>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
