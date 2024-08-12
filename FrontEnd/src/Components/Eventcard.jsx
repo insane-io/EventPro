@@ -22,18 +22,18 @@ const Eventcard = (props) => {
       <div>
         <div className='bg-[#FFE5E5] rounded-3xl' >
           <Link to={props.link} >
-            <img src={`http://127.0.0.1:8000/${props.img}`} alt='college' className='w-full hover:scale-105 object-cover h-40 rounded-3xl p-4' />
+            <img src={`http://13.61.2.190:8000/${props.img}`} alt='college' className='w-full hover:scale-105 object-cover h-40 rounded-3xl p-4' />
           </Link>
           <p className='mb-2 ps-4 text-2xl font-extrabold text-[#FF6B66]'><strong>{props.Title}</strong></p>
           <p className='ps-4 text-xl text-[#FF6B66] '><strong> Venue :</strong> {props.venue}, {props.address}</p>
           <div className=' grid grid-cols-2'>
             <div className='col-span-1'>
               <p className='text-left text-l text-[#FF6B66] mt-4 px-4'>{props.sdate}</p>
-              <p className='text-left text-l text-[#FF6B66] px-4 '>09:00 AM</p>
+              <p className='text-left text-l text-[#FF6B66] px-4 '>{props.duration}</p>
             </div>
             <div className='col-span-1 px-4 mt-4'>
               <p className='text-right text-2xl text-[#FF6B66] '>Prize Worth</p>
-              <p className='text-right text-4xl font-extrabold text-[#FF0000]'>$5000</p>
+              <p className='text-right text-4xl font-extrabold text-[#FF0000]'>₹{props.prize}</p>
             </div>
           </div>
           <div className='flex justify-between mt-4 p-4'>
@@ -44,7 +44,7 @@ const Eventcard = (props) => {
               </Link>
             </div>
             <div className='col-span-1 '>
-              <p className='text-right text-4xl font-extrabold text-[#FF6B66]'>$50</p>
+              <p className='text-right text-4xl font-extrabold text-[#FF6B66]'>₹{props.fee}</p>
             </div>
           </div>
           {props.page === "dashboard" ? (

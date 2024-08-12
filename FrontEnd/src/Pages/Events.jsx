@@ -17,6 +17,7 @@ const Explore = () => {
         const response = await axios.get('http://127.0.0.1:8000/event/event_info/');
         if (Array.isArray(response.data.events)) {
           setData(response.data.events);
+          console.log(response.data.events)
         } else {
           console.error("Data is not an array:", response.data.events);
         }
@@ -102,11 +103,17 @@ const Explore = () => {
           </div>
         </div>
         <div className='col-span-5 md:col-span-4 mt-3 rounded-lg'>
-          <div className='grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
-            {filteredData.map((event) => (
-              <Eventcard img={event.banner} Title={event.name} venue={event.venue.name} address={event.venue.address} link={`/eventinfo/${event.unique_id}`} sdate={event.start_date} edate={event.end_date} />
-            ))}
-          </div>
+          {
+            data.length === 0 ? (
+              <h1 className='flex justify-center font-semibold text-2xl'>No Events Currently available</h1>
+            ) : (
+              <div className='grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
+                {filteredData.map((event) => (
+                  <Eventcard img={event.banner} duration={event.duration} prize={event.prize} fee={event.reg_fee} Title={event.name} venue={event.venue.name} address={event.venue.address} link={`/eventinfo/${event.unique_id}`} sdate={event.start_date} edate={event.end_date} />
+                ))}
+              </div>
+            )
+          }
         </div>
       </div>
     </div>

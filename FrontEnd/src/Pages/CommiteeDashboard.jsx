@@ -13,7 +13,7 @@ const CommiteeDashboard = () => {
     // Fetch event data from the backend API
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/event/event_info/');
+        const response = await axios.get('http://13.61.2.190:8000/event/event_info/');
         // Assuming the first event in the array has the required data
         const firstEventData = response.data.events[0];
         setEventData({

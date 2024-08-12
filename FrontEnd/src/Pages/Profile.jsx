@@ -43,13 +43,13 @@ const Profile = () => {
           <div className='flex flex-col items-center justify-start h-auto lg:col-span-1 md:col-span-2 p-4 border-2'>
             {
               data.profile_image ? (
-                <img src={`http://127.0.0.1:8000/${data?.profile_image}`} alt="Profile" className='flex my-3 rounded-full w-52 h-52' />
+                <img src={`http://13.61.2.190:8000/${data?.profile_image}`} alt="Profile" className='flex my-3 rounded-full w-52 h-52' />
               ) : (
                 <img src="https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg" alt="" className='flex my-3 rounded-full w-52 h-52' />
               )
             }
             <button onClick={handleLogout} className='w-2/4 p-3 mt-5 text-white bg-red-700 rounded'>Logout</button>
-            <Link to='/updateprofile' className='w-2/4 p-3 mt-5 flex justify-center text-white bg-orange-400 rounded'>Update Profile</Link>
+            <Link to='/updateprofile' className='w-3/4 p-3 mt-5 flex justify-center text-white bg-orange-400 rounded'>Update Profile</Link>
           </div>
           <div className='lg:col-span-3 md:col-span-2 p-5 border-2'>
             <h1 className='p-3 text-xl bg-gray-300'>Name: {`${data?.first_name} ${data?.last_name}`}</h1>

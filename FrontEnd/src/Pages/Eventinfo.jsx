@@ -22,6 +22,7 @@ function Eventinfo() {
             .then((res) => {
                 setEventInfo(res.data.event);
                 setEventId(res.data.event.unique_id)
+                console.log(res.data)
             })
             .catch((error) => {
                 console.error("Error:", error);
@@ -83,7 +84,7 @@ function Eventinfo() {
                     <img
                         className="w-full col-span-2"
                         style={{ boxShadow: "0px 1px 10px grey", borderRadius: "20px", display: "block", Width: "70%", maxHeight: "350px", minHeight: '420px' }}
-                        src={`http://127.0.0.1:8000${eventinfo?.banner}`}
+                        src={`http://13.61.2.190:8000${eventinfo?.banner}`}
                         alt="..."
                     />
                     <div
@@ -99,7 +100,7 @@ function Eventinfo() {
                             className="absolute top-0 left-0 right-0 bg-[#FFE5E5] text-white p-4 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                             style={{ boxShadow: "0px 1px 10px grey", zIndex: 10 }}
                         >
-                            <p className=" font-bold text-[#FF6B66]">Register Number :<strong className="ms-2">{eventinfo?.total_registrations}</strong></p>
+                            <p className=" font-bold text-[#FF6B66]">Number of Registrations :<strong className="ms-2">{eventinfo?.total_registrations}</strong></p>
                         </div>
                         <div className="flex flex-col details" style={{ border: 'none' }}>
                             <h2 className="m-3 mb-3 text-4xl font-bold text-[#FF6B66]">{eventinfo?.name}</h2>
@@ -107,15 +108,15 @@ function Eventinfo() {
                                 <div className='mx-3 rounded' style={{ width: "5px", backgroundColor: "#FF6B66" }}></div>
                                 <div className="flex flex-col">
                                     <p className="text-xl ">Venue</p>
-                                    <h4 className="text-2xl font-bold text-[#FF6B66]">Classroom: {eventinfo?.venue?.name}</h4>
-                                    <h4 className="text-2xl font-bold text-[#FF6B66]">Floor: {eventinfo?.venue?.address}</h4>
-
-                                    <p className="text-lg text-grey">Start Date</p>
-                                    <h4 className="text-2xl font-bold text-[#FF6B66]">{eventinfo?.start_date}</h4>
-                                    <p className="text-lg text-grey">End Date</p>
-                                    <h4 className="text-2xl font-bold text-[#FF6B66]">{eventinfo?.end_date}</h4>
+                                    <h4 className="text-2xl font-bold text-[#FF6B66]">{eventinfo?.venue?.name}, {eventinfo?.venue?.address}</h4>
+                                    <p className="text-lg text-grey">Date</p>
+                                    <h4 className="text-2xl font-bold text-[#FF6B66]">{eventinfo?.start_date} to {eventinfo?.end_date}</h4>
                                     <p className="text-xl text-grey">Location</p>
                                     <h4 className="text-2xl font-bold text-[#FF6B66]">{eventinfo?.location}</h4>
+                                    <p className="text-xl text-grey">Prizes worth</p>
+                                    <h4 className="text-2xl font-bold text-[#FF6B66]">{eventinfo?.prize === "" ? "₹ 0" : `₹ ${eventinfo?.prize}`}</h4>
+                                    <p className="text-xl text-grey">Registration Fee</p>
+                                    <h4 className="text-2xl font-bold text-[#FF6B66]">{eventinfo?.reg_fee === "" || eventinfo?.reg_fee === "0" ? "Free" : `₹ ${eventinfo?.reg_fee}` }</h4>
                                 </div>
                             </div>
                         </div>

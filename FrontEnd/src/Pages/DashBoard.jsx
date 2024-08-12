@@ -69,7 +69,7 @@ const DashBoard = () => {
         </div>
         <div className={`${sidebar ? "col-span-4 grid-cols-3" : "col-span-5 grid-cols-4"} grid my-3 mx-5 gap-4`}>
           {filteredData.map((event) => (
-            <Eventcard key={event.id} img={event?.image} Title={event?.name} link={`/eventinfo/${event?.unique_id}`} sdate={event?.start_date} edate={event?.end_date} page={"dashboard"} mentor={event?.approved_by_mentor} hod={event?.approved_by_hod} dean={event?.approved_by_dean} url={url} id={event.unique_id} onApprove={handleUpdate} />
+            <Eventcard key={event.id} img={event?.image} venue={event.venue.name} address={event.venue.address} prize={event.prize} fee={event.reg_fee} Title={event?.name} link={`/eventinfo/${event?.unique_id}`} sdate={event?.start_date} edate={event?.end_date} page={"dashboard"} mentor={event?.approved_by_mentor} hod={event?.approved_by_hod} dean={event?.approved_by_dean} url={url} id={event.unique_id} onApprove={handleUpdate} />
           ))}
         </div>
       </div>

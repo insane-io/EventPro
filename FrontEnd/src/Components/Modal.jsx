@@ -1,7 +1,7 @@
 import axiosInstance from '../axios'
 import React, { useState, useEffect } from 'react';
 
-export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id, onApprove, button }) => {
+export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id,message, onApprove, button }, props) => {
 
     const [content, setContent] = useState(modalContent);
 
@@ -13,9 +13,8 @@ export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id
         try {
             if (button === "approve") {
                 await axiosInstance.post(`event/${url}?event_id=${id}`, { message: content })
-                console.log("Event disapproved")
             } else if (button === "disapprove") {
-                await axiosInstance.post(`event/disapprove/?event_id=${id}`)
+                await axiosInstance.post(`event/disapprove/?event_id=${id}`, { message: content })
                 console.log("Event disapproved")
             }
             onApprove();
@@ -43,11 +42,11 @@ export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id
                             <div className="mb-4">
                                 {
                                     page === "dashboard" ? (
-                                        <div className={`${button === "approve" ? 'text-green-400' : 'text-red-400'} font-bold text-2xl underline mb-5`}>Enter Reason</div>
+                                        <div className={`${button === "approve" ? 'text-green-400' : 'text-red-400'} font-bold text-2xl underline mb-5`}>Enter Feedback</div>
                                     ) : (
                                         <div className="flex items-center">
                                             <img
-                                                src="profile1.jpg"
+                                                src={`http://13.61.2.190:8000${modalContent.profile_image}`}
                                                 alt="Profile 1"
                                                 className="w-12 h-12 rounded-full"
                                             />
@@ -61,7 +60,8 @@ export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id
                                     id="description"
                                     name="description"
                                     placeholder={page === "dashboard" ? "Reason" : "Description"}
-                                    value={content} 
+                                    // value={props.page === "myevents" ? {message} : content} 
+                                    value={message}
                                     onChange={(e) => setContent(e.target.value)}
                                 />
 

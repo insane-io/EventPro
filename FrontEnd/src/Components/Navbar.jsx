@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
-import logo from "../Assets/logo.png";
+import logo from "../Assets/Screenshot 2024-08-12 072831.png";
 import { MyContext } from '../Context/MyContext';
 import LoadingBar from 'react-top-loading-bar'
 
@@ -28,6 +28,7 @@ const Navbar = () => {
   };
 
   return (
+    
     <nav className={`font-bold text-2xl fixed w-full z-20 top-0 start-0 bg-white border-b-2`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">

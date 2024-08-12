@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 const Register = () => {
 
   const { setLogin, setUid, setUser } = useContext(MyContext)
-  const [staff, setStaff] = useState()
+  const [staff, setStaff] = useState("baseUser")
   const [formData, setFormData] = useState({
     email: "",
     password1: "",

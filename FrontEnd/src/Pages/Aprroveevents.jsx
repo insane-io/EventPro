@@ -17,7 +17,7 @@ const Approveevents = (props) => {
         // Fetch existing data and populate the form
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/getEventData'); // Replace with your API endpoint
+                const response = await axios.get('http://13.61.2.190:8000/api/getEventData'); // Replace with your API endpoint
                 const eventData = response.data;
 
                 setFormData({
@@ -43,7 +43,7 @@ const Approveevents = (props) => {
     const handleApprove = async () => {
         // Update the approval status in the backend
         try {
-            await axios.put('http://127.0.0.1:8000/api/approveEvent', { isApproved: true }); // Replace with your API endpoint
+            await axios.put('http://13.61.2.190:8000/api/approveEvent', { isApproved: true }); // Replace with your API endpoint
             setIsApproved(true);
             console.log('Event Approved successfully!');
         } catch (error) {
@@ -54,7 +54,7 @@ const Approveevents = (props) => {
     const handleDisapprove = async () => {
         // Update the approval status in the backend
         try {
-            await axios.put('http://127.0.0.1:8000/api/disapproveEvent', { isApproved: false }); // Replace with your API endpoint
+            await axios.put('http://13.61.2.190:8000/api/disapproveEvent', { isApproved: false }); // Replace with your API endpoint
             setIsApproved(false);
             console.log('Event Disapproved successfully!');
         } catch (error) {
@@ -120,7 +120,7 @@ const Approveevents = (props) => {
 
         try {
             // Send the updated event data to the backend
-            await axios.put('http://127.0.0.1:8000/api/updateEvent', formDataToSend); // Replace with your API endpoint
+            await axios.put('http://13.61.2.190:8000/api/updateEvent', formDataToSend); // Replace with your API endpoint
             console.log('Event data updated successfully!');
         } catch (error) {
             console.error('Error updating event data:', error);
