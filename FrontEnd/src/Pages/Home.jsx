@@ -6,7 +6,7 @@ import image from "../Assets/home_image.svg"
 import img1 from "../Assets/img 1.svg"
 import img2 from "../Assets/img 2.png"
 import img3 from "../Assets/img 3.svg"
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     async function getdata() {
       try {
-        const res = await axios.get('http://13.61.2.190:8000/event/homepage/');
+        const res = await axios.get('http://127.0.0.1:8000/event/homepage/');
         setData(res.data);
       } catch (error) {
         console.error("Error fetching data:", error);

@@ -46,7 +46,7 @@ export const Modal = ({ handleCloseModal, modalContent, showModal, page, url, id
                                     ) : (
                                         <div className="flex items-center">
                                             <img
-                                                src={`http://13.61.2.190:8000${modalContent.profile_image}`}
+                                                src={`http://127.0.0.1:8000${modalContent.profile_image}`}
                                                 alt="Profile 1"
                                                 className="w-12 h-12 rounded-full"
                                             />

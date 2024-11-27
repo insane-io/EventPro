@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/*"
-  to = "http://13.61.2.190:8000/:splat"
+  to = "http://127.0.0.1:8000/:splat"
   status = 200
   force = true
   headers = { 

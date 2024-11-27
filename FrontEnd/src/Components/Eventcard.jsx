@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import { Modal } from "../Components/Modal"
 
-const imgae = 'https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjIwMzV8MHwxfGFsbHwxf'
 const Eventcard = (props) => {
   const [button, setButton] = useState()
   const [show, setShow] = useState()
@@ -22,7 +21,7 @@ const Eventcard = (props) => {
       <div>
         <div className='bg-[#FFE5E5] rounded-3xl' >
           <Link to={props.link} >
-            <img src={`http://13.61.2.190:8000/${props.img}`} alt='college' className='w-full hover:scale-105 object-cover h-40 rounded-3xl p-4' />
+            <img src={`http://127.0.0.1:8000/${props.img}`} alt='college' className='w-full hover:scale-105 object-cover h-40 rounded-3xl p-4' />
           </Link>
           <p className='mb-2 ps-4 text-2xl font-extrabold text-[#FF6B66]'><strong>{props.Title}</strong></p>
           <p className='ps-4 text-xl text-[#FF6B66] '><strong> Venue :</strong> {props.venue}, {props.address}</p>

@@ -116,7 +116,7 @@ const EmpEvent = () => {
     formDataToSend.append('prize', formData.prize);
 
     try {
-      const response = await axiosInstance.post('http://13.61.2.190:8000/event/event_add/', formDataToSend, {
+      const response = await axiosInstance.post('http://127.0.0.1:8000/event/event_add/', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

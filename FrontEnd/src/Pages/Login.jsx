@@ -38,7 +38,6 @@ const Login = () => {
       navigate("/profile");
     } catch (error) {
       console.error("Error:", error);
-      // Handle errors, show error message to the user
     }
   };
 

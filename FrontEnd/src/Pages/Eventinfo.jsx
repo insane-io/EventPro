@@ -84,7 +84,7 @@ function Eventinfo() {
                     <img
                         className="w-full col-span-2"
                         style={{ boxShadow: "0px 1px 10px grey", borderRadius: "20px", display: "block", Width: "70%", maxHeight: "350px", minHeight: '420px' }}
-                        src={`http://13.61.2.190:8000${eventinfo?.banner}`}
+                        src={`http://127.0.0.1:8000${eventinfo?.banner}`}
                         alt="..."
                     />
                     <div

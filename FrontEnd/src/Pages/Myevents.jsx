@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axiosInstance from '../axios';
-import { Commiteehistory } from '../Components/Commiteehistory';
+import  Commiteehistory  from '../Components/Commiteehistory';
 
 const Myevents = () => {
   const [events, setEvents] = useState([]);

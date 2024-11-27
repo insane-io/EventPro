@@ -3,6 +3,7 @@ import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import logo from "../Assets/Screenshot 2024-08-12 072831.png";
 import { MyContext } from '../Context/MyContext';
 import LoadingBar from 'react-top-loading-bar'
+import { GrTask } from "react-icons/gr";
 
 const Navbar = () => {
   const navigate = useNavigate()

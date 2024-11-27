@@ -43,7 +43,7 @@ const Profile = () => {
           <div className='flex flex-col items-center justify-start h-auto lg:col-span-1 md:col-span-2 p-4 border-2'>
             {
               data.profile_image ? (
-                <img src={`http://13.61.2.190:8000/${data?.profile_image}`} alt="Profile" className='flex my-3 rounded-full w-52 h-52' />
+                <img src={`http://127.0.0.1:8000/${data?.profile_image}`} alt="Profile" className='flex my-3 rounded-full w-52 h-52' />
               ) : (
                 <img src="https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg" alt="" className='flex my-3 rounded-full w-52 h-52' />
               )

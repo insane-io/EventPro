@@ -34,7 +34,7 @@ const Register = () => {
     }
 
     try {
-      const res = await axiosInstance.post(`${staff === "baseUser" ? '/authentication/signup/' : '/authentication/special_signup/'}`, {
+      const res = await axiosInstance.post( {
         email: formData.email,
         username: formData.username,
         first_name: formData.first_name,

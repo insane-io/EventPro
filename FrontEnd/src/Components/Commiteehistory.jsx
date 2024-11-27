@@ -3,7 +3,7 @@ import { Modal } from '../Components/Modal';
 import { useNavigate } from 'react-router-dom';
 import {Link} from "react-router-dom"
 
-export const Commiteehistory = ({ events }) => {
+export default function Commiteehistory ({ events }) {
 
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
@@ -35,7 +35,7 @@ export const Commiteehistory = ({ events }) => {
                 <div className='col-span-2'>
                   <div className='flex flex-col'>
                   <Link to={`/eventinfo/${event.unique_id}`}>
-                    <img src={`http://13.61.2.190:8000${event.banner}`} className='rounded h-40' alt={event.name} />
+                    <img src={`http://127.0.0.1:8000${event.banner}`} className='rounded h-40' alt={event.name} />
                     </Link>   
                   </div>
                 </div>
@@ -56,7 +56,7 @@ export const Commiteehistory = ({ events }) => {
                             (
                               <img src="https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg" alt="" onClick={() => handleOpenModal(approval.user, approval.message)} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                             ) : (
-                              <img src={`http://13.61.2.190:8000${approval.user.profile_image}`} alt={approval.user.first_name} onClick={() => handleOpenModal(approval.user, approval.message)} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+                              <img src={`http://127.0.0.1:8000${approval.user.profile_image}`} alt={approval.user.first_name} onClick={() => handleOpenModal(approval.user, approval.message)} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                             )
                         }
                         <p className='text-[#FF6B66] text-sm'>{approval.user.first_name}</p>
